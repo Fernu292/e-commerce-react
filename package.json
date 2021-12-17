@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "Shop made with react",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fernu292/e-commerce-react.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "build": "webpack --mode production"
   },
   "keywords": [
     "React",
