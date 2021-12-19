@@ -1,9 +1,14 @@
 import React from "react";
-import '../styles/global.scss';
+import '../styles/global.css';
+
+import Layout from '../Containers/Layout';
+import Login from "../Containers/Login";
 
 const App = () => {
     return ( 
-        <h1>Curso practico React, en Platzi</h1>
+        <Layout>
+            <Login />
+        </Layout>
     );
 }
  
