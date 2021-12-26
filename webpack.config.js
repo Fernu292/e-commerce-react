@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -8,7 +8,8 @@ module.exports = {
     mode: 'development',
     output : {
         path : path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath : '/'
     },
     resolve : {
         extensions: ['.js','.jsx'],
@@ -47,11 +48,9 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css'
         }),
-        new CleanWebpackPlugin()
     ],
     devServer: {
         //Configuracion soportada del webpack actual
-
         static: {
             directory: path.join(__dirname, 'dist'),
         },
