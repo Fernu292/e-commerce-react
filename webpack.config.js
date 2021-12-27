@@ -9,6 +9,7 @@ module.exports = {
     output : {
         path : path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        //Trabajar mejor con rutas
         publicPath : '/'
     },
     resolve : {
@@ -37,6 +38,12 @@ module.exports = {
                     "css-loader",
                     "sass-loader"
                 ]
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    "svg-url-loader"
+                ]
             }
         ]
     },
@@ -50,7 +57,11 @@ module.exports = {
         }),
     ],
     devServer: {
+        //Trabajar con rutas 
+        historyApiFallback: true,
+
         //Configuracion soportada del webpack actual
+
         static: {
             directory: path.join(__dirname, 'dist'),
         },
