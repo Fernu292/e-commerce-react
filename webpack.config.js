@@ -55,6 +55,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css'
         }),
+        new CleanWebpackPlugin(),
     ],
     devServer: {
         //Trabajar con rutas 

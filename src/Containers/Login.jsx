@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Login.scss';
 
 
@@ -16,7 +17,7 @@ const Login = () => {
                 <input type="password" id="password" placeholder="*********" className="input input-password" />
 
                 <input type="submit" value="Log in" className="primary-button login-button" />
-                <a href="/">Forgot my password</a>
+                <Link to={"/recovery-password"}>Forgot my password</Link>
             </form>
 
             <button className="secondary-button signup-button">Sign up</button>
